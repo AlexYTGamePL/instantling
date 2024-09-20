@@ -12,8 +12,8 @@ import time
 
 # OPTIONS
 url = 'https://instaling.pl/teacher.php?page=login'
-login_set = "x"
-password_set = "x"
+login_set = "2p2259788"
+password_set = "rxuxz"
 
 
 options = webdriver.ChromeOptions()
@@ -67,10 +67,10 @@ while(cos):
             driver.find_element(By.ID, "check").click()
         else:
             new_word_var = driver.find_element(By.ID, "dont_know_new")
-            if new_word_var.size['width'] > 0 and new_word_var.size['height'] > 0:
-                action.move_to_element(new_word_var.click()).perform()
-                time.sleep(0.2, 1)
-                action.move_to_element(driver.find_element(By.ID, "skip").click()).perform()
+            if new_word_var.size['width'] > 0 and new_word_var.size['height'] > 0 and new_word_var:
+                action.move_to_element(driver.find_element(By.ID, "dont_know_new")).click().perform()
+                time.sleep(random.uniform(0.3, 1))
+                action.move_to_element(driver.find_element(By.ID, "next_word")).click().perform()
                 time.sleep(random.uniform(1.5, 3.0))
                 continue;
             time.sleep(random.uniform(1.5, 3.0))
