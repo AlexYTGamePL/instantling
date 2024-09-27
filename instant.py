@@ -70,7 +70,7 @@ while(cos):
             if new_word_var.size['width'] > 0 and new_word_var.size['height'] > 0 and new_word_var:
                 action.move_to_element(driver.find_element(By.ID, "dont_know_new")).click().perform()
                 time.sleep(random.uniform(0.3, 1))
-                action.move_to_element(driver.find_element(By.ID, "next_word")).click().perform()
+                action.move_to_element(driver.find_element(By.ID, "skip")).click().perform()
                 time.sleep(random.uniform(1.5, 3.0))
                 continue;
             time.sleep(random.uniform(1.5, 3.0))
